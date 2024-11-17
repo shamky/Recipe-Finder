@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Finder</title>
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+      }
+      .recipe {
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .recipe img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+      .recipe:hover {
+        transform: scale(1.05);
+      }
+      .recipe-details {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,167 +37,37 @@
       <h1>Recipe Finder</h1>
 
       <nav class="nav">
-        <!-- Navigation links will be added here -->
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <form id="search-form" class="search-form">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search for recipes..."
-        />
-        <button id="search-button" type="submit">Search</button>
-      </form>
     </header>
 
     <main>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur
-        nobis reiciendis praesentium, rerum hic fuga commodi sapiente, facere ut
-        obcaecati esse aliquid consectetur quo delectus quidem porro nam
-        architecto.
-      </p>
-      <div id="filters">
-        <!-- Filters will be added here -->
-      </div>
-      <div id="results-container"></div>
-      <div id="pagination"></div>
-
-      <div id="recipe-modal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div id="recipe-details"></div>
+      <div class="top-panel">
+        <h2>Easily the find recipe of your liking . . .</h2>
+        <br />
+        <p>
+          Welcome to Recipe Explorer, your go-to destination for discovering
+          delicious recipes! Easily search for meals and get step-by-step
+          instructions with vibrant photos
+        </p>
+        <br />
+        <div class="container">
+          <form id="search-form" class="search-form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for recipes..."
+            />
+            <button id="search-button" type="submit">Search</button>
+          </form>
+          <div id="results"></div>
         </div>
+        <div class="recipe-details" id="recipeDetails"></div>
+        <div class="gallery" id="recipeGallery"></div>
       </div>
     </main>
 
@@ -179,6 +75,6 @@
       <p>&copy; 2023 Recipe Finder. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
