@@ -14,12 +14,6 @@ body {
   align-items: center;
 }
 
-/* Color-Palette:
-  Dark : rgb(26, 26, 26),
-  Light : rgb( 230, 230, 230),
-  Main-Color 1: rgb(191, 86, 114),
-  Main-Color 2: rgb(55, 132, 140)
-
 /* Header */
 header {
   background-color: rgb(26, 26, 26);
@@ -79,8 +73,6 @@ a:hover {
   color: rgb(191, 86, 114);
 }
 
-/* Header End */
-
 /* Main */
 main {
   position: absolute;
@@ -94,12 +86,6 @@ main {
   border-radius: 10px;
   background-color: #1C1C1C;
   color: #e0e0e0;
-  /* background: radial-gradient(
-    circle,
-    rgb(255, 255, 255) 0%,
-    rgb(255, 255, 255) 70%,
-    rgba(191, 86, 114, 1) 100%
-  ); */
   overflow-y: scroll;
   border-color: rgba(191, 86, 114, 0.8);
   border-style: solid;
@@ -128,23 +114,17 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 0px;
 }
+
 #search-input {
   padding: 10px;
   border: none;
   border-radius: 20px;
   margin-right: 10px;
   font-size: 16px;
-
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   outline: none;
-}
-::placeholder {
-  color: #fff;
-  opacity: 1;
 }
 
 #search-button {
@@ -157,11 +137,35 @@ p {
   cursor: pointer;
   outline: none;
 }
+
 #search-button:hover {
   background-color: rgb(191, 86, 114);
 }
 
-/* Main End */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.recipe {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.recipe img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.recipe:hover {
+  transform: scale(1.05);
+}
+.recipe-details {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
 
 /* Footer */
 footer {
@@ -175,5 +179,3 @@ footer {
   z-index: 999;
   outline: 2px solid rgb(191, 86, 114);
 }
-
-/* Footer End */

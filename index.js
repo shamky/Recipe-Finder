@@ -12,10 +12,10 @@ document.getElementById("search-button").addEventListener("click", function () {
             const mealDiv = document.createElement("div");
             mealDiv.className = "recipe";
             mealDiv.innerHTML = `
-                            <h3>${meal.strMeal}</h3>
-                            <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-                            <p><a href="${meal.strSource}" target="_blank">Recipe Link</a></p>
-                        `;
+              <h3>${meal.strMeal}</h3>
+              <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+              <p><a href="${meal.strSource}" target="_blank">Recipe Link</a></p>
+            `;
             resultsDiv.appendChild(mealDiv);
           });
         } else {
@@ -46,9 +46,9 @@ function displayRecipes(recipes) {
     const recipeDiv = document.createElement("div");
     recipeDiv.classList.add("recipe");
     recipeDiv.innerHTML = `
-             <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
-             <p>${recipe.strMeal}</p>
-         `;
+      <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
+      <p>${recipe.strMeal}</p>
+    `;
     recipeDiv.addEventListener("click", () => showRecipeDetails(recipe.idMeal));
     gallery.appendChild(recipeDiv);
   });
@@ -63,17 +63,17 @@ async function showRecipeDetails(id) {
     if (data.meals) {
       const recipe = data.meals[0];
       recipeDetails.innerHTML = `
-          <h2>${recipe.strMeal}</h2>
-          <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
-          <h3>Ingredients:</h3>
-          <ul>
-              ${Object.keys(recipe)
-                .filter((key) => key.startsWith("strIngredient") && recipe[key])
-                .map((key) => `<li>${recipe[key]}</li>`)
-                .join("")}
-          </ul>
-          <h3>Instructions:</h3>
-          <p>${recipe.strInstructions}</p>
+        <h2>${recipe.strMeal}</h2>
+        <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
+        <h3>Ingredients:</h3>
+        <ul>
+          ${Object.keys(recipe)
+            .filter((key) => key.startsWith("strIngredient") && recipe[key])
+            .map((key) => `<li>${recipe[key]}</li>`)
+            .join("")}
+        </ul>
+        <h3>Instructions:</h3>
+        <p>${recipe.strInstructions}</p>
       `;
       recipeDetails.style.display = "block";
     } else {
